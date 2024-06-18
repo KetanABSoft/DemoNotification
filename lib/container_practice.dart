@@ -12,23 +12,23 @@ class _PracticeContainerState extends State<PracticeContainer> {
   @override
   void initState() {
     super.initState();
-    FirebaseMessaging.onMessage.listen((message) {
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-          content: Text(message.data["MyName"].toString()),
-          duration: Duration(seconds: 10),
-        backgroundColor: Colors.green,
-      ));
-      print("Messege Recieved! ${message.notification!.title}");
-    });
-
-    FirebaseMessaging.onMessageOpenedApp.listen((message) {
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-        content: Text("App is Open By Notification"),
-        duration: Duration(seconds: 10),
-        backgroundColor: Colors.green,
-      ));
-      print("Messege Recieved! ${message.notification!.title}");
-    });
+    // FirebaseMessaging.onMessage.listen((message) {
+    //   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+    //       content: Text(message.data["MyName"].toString()),
+    //       duration: Duration(seconds: 10),
+    //     backgroundColor: Colors.green,
+    //   ));
+    //   print("Messege Recieved! ${message.notification!.title}");
+    // });
+    //
+    // FirebaseMessaging.onMessageOpenedApp.listen((message) {
+    //   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+    //     content: Text("App is Open By Notification"),
+    //     duration: Duration(seconds: 10),
+    //     backgroundColor: Colors.green,
+    //   ));
+    //   print("Messege Recieved! ${message.notification!.title}");
+    // });
   }
   @override
   Widget build(BuildContext context) {
