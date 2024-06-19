@@ -9,7 +9,7 @@ import 'package:shivpeeth_erp_system/shivpeeth/shivpeeth_pages/shivpeeth_home/sh
 import 'package:shivpeeth_erp_system/shivpeeth/shivpeeth_pages/shivpeeth_home/shivpeethnotic.dart';
 import 'package:shivpeeth_erp_system/shivpeeth/shivpeeth_pages/shivpeeth_student/shivpeeth_parentview_attendance.dart';
 
-Future<void> backgroundhandler( RemoteMessage message) async {
+Future<void> backgroundhandler(RemoteMessage message) async {
   print("Messege Recieved! ${message.notification!.title}");
 }
 
@@ -33,10 +33,8 @@ class NotificationService {
     FirebaseMessaging.onMessage.listen((RemoteMessage message) {
       //              try {
       //   Map<String, dynamic> data = message.data;
-
       //                   print("initlocalnew");
       //       initLocalNotifications(message,context);
-
       //      showNotification(data);
       // } catch (e) {
       //   print('Exception: $e');

@@ -31,7 +31,7 @@ Future<void> main() async {
 
   await Firebase.initializeApp();
   await FirebaseMessaging.instance.requestPermission();
-  FirebaseMessaging.onBackgroundMessage(_backgroundMessageHandler);
+ // FirebaseMessaging.onBackgroundMessage(_backgroundMessageHandler);
 
   await flutterLocalNotificationsPlugin
       .resolvePlatformSpecificImplementation<
@@ -48,15 +48,15 @@ Future<void> main() async {
 }
 
 @pragma('vm:entry-point')
-Future<void> _backgroundMessageHandler(RemoteMessage message) async {
-  await Firebase.initializeApp();
-  try {
-    Map<String, dynamic> data = message.data;
-    notificationServices.showNotification(data);
-  } catch (e) {
-    print('Exception: $e');
-  }
-}
+// Future<void> _backgroundMessageHandler(RemoteMessage message) async {
+//   await Firebase.initializeApp();
+//   try {
+//     Map<String, dynamic> data = message.data;
+//     notificationServices.showNotification(data);
+//   } catch (e) {
+//     print('Exception: $e');
+//   }
+// }
 
 //late NotificationServices notificationServices;
 NotificationService notificationServices=NotificationService();
